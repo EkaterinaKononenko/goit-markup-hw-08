@@ -1,0 +1,33 @@
+.modal-btn-submit {
+  width: 200px;
+  height: 50px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.88;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  letter-spacing: 0.06em;
+  padding: 10px 56px 10px 55px;
+  cursor: pointer;
+  color: #ffffff;
+  background: #2196f3;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  border-color: transparent;
+  margin-left: 124px;
+
+  @include transition(
+    background,
+    box-shadow,
+    null,
+    250ms,
+    cubic-bezier(0.4, 0, 0.2, 1)
+  );
+  &:hover,
+  &:focus {
+    background: #188ce8;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  }
+}

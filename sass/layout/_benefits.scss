@@ -1,0 +1,48 @@
+.benefits {
+  width: 100%;
+}
+.benefits__list {
+  display: block;
+  display: flex;
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+.benefits__title {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  outline: 1px solid transparent;
+  display: block;
+  display: flex;
+  flex-basis: calc(100% / 4 - 30px);
+}
+.benefits__text {
+  font-size: 14px;
+  line-height: 1.71;
+  color: var(--contacts-color);
+  letter-spacing: 0.03em;
+  margin-top: 10px;
+  outline: 1px solid transparent;
+  display: block;
+  flex-basis: calc(100% / 4 - 30px);
+}
+.benefits__item {
+  margin-right: 30px;
+}
+.benefits__wrapper {
+  margin-bottom: 30px;
+  display: flex;
+  background: var(--main-team-color);
+  border-radius: 4px;
+  align-items: center;
+  justify-content: center;
+  width: 270px;
+  height: 120px;
+}
+.benefits__item:last-child {
+  margin-right: 0;
+}
