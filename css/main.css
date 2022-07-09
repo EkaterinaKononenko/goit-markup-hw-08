@@ -244,7 +244,15 @@ body {
   .client__logo {
     display: inline-block;
     margin-right: 0;
+    margin-left: 0;
+  }
+}
+@media screen and (min-width: 768px) {
+  .client__logo {
+    display: inline-block;
+    width: 226px;
     margin-right: 0;
+    margin-left: 0;
   }
 }
 @media screen and (min-width: 1200px) {
@@ -779,6 +787,14 @@ img {
     padding-bottom: 60px;
   }
 }
+@media screen and (min-width: 768px) {
+  .client {
+    margin-right: 0;
+    margin-left: 0;
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+}
 @media screen and (min-width: 1200px) {
   .client {
     height: 372px;
@@ -802,6 +818,13 @@ img {
     margin-bottom: 30px;
   }
 }
+@media screen and (min-width: 768px) {
+  .client__title {
+    font-size: 28px;
+    line-height: 1.18;
+    margin-bottom: 30px;
+  }
+}
 .client__list {
   display: flex;
   gap: 30px;
@@ -810,6 +833,12 @@ img {
   .client__list {
     flex-wrap: wrap;
     justify-content: space-around;
+  }
+}
+@media screen and (min-width: 768px) {
+  .client__list {
+    flex-wrap: wrap;
+    justify-content: space-between;
   }
 }
 @media screen and (min-width: 1200px) {
@@ -839,6 +868,12 @@ img {
 @media screen and (min-width: 480px) {
   .client__link {
     width: 210px;
+    height: 92px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .client__link {
+    width: 226px;
     height: 92px;
   }
 }
