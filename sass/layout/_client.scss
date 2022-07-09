@@ -15,7 +15,6 @@
   }
 
   @media screen and (min-width: 1200px) {
-    height: 372px;
     padding-top: 94px;
     padding-bottom: 94px;
   }
@@ -40,6 +39,9 @@
   }
 
   @media screen and (min-width: 1200px) {
+    margin-bottom: 50px;
+    font-size: 36px;
+    line-height: 1.17;
   }
 }
 .client__list {
@@ -93,5 +95,7 @@
   }
 
   @media screen and (min-width: 1200px) {
+    width: 170px;
+    height: 92px;
   }
 }
