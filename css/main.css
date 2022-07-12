@@ -590,6 +590,7 @@ body {
 }
 
 .works {
+  display: none;
   font-weight: 700;
   font-size: 36px;
   line-height: 1.17;
@@ -597,6 +598,11 @@ body {
   letter-spacing: 0.03em;
   width: 100%;
   padding-bottom: 94px;
+}
+@media screen and (min-width: 1200px) {
+  .works {
+    display: flex;
+  }
 }
 
 .works__title {
