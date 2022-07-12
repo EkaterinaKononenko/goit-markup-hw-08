@@ -68,9 +68,8 @@ ul {
 
 img {
   display: block;
-  width: 100%;
-  max-width: 100%;
   height: auto;
+  max-width: 100%;
 }
 
 body {
@@ -127,9 +126,9 @@ body {
   font-weight: 700;
   font-size: 16px;
   line-height: 1.88;
-  align-items: center;
-  text-align: center;
   letter-spacing: 0.06em;
+  text-align: center;
+  align-items: center;
   color: var(--main-bgd-color);
   background: var(--main-color);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
@@ -148,7 +147,6 @@ body {
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
 }
-
 .portfolio__btn {
   font-family: inherit;
   font-weight: 500;
@@ -397,29 +395,73 @@ body {
 }
 
 .decision__title {
-  margin: 0 auto;
   font-weight: 900;
-  font-size: 44px;
-  line-height: 1.36;
-  text-align: center;
+  font-size: 26px;
+  line-height: 1.62;
   letter-spacing: 0.06em;
   text-transform: uppercase;
   color: var(--main-bgd-color);
-  max-width: 696px;
+  max-width: 480px;
   outline: 1px solid transparent;
+}
+@media screen and (min-width: 768px) {
+  .decision__title {
+    max-width: 360px;
+    text-align: center;
+    margin: 0 auto;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .decision__title {
+    font-size: 44px;
+    line-height: 1.36;
+    text-align: center;
+    max-width: 696px;
+    margin: 0 auto;
+  }
 }
 
 .decision {
+  height: 400px;
+  padding: 118px 0;
   text-align: center;
-  height: 600px;
-  padding: 200px 0;
   background-repeat: no-repeat;
   background-position: 50% 50%;
   background-size: cover;
-  max-width: 1600px;
-  background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero.jpg);
-  margin: 0 auto;
+  width: 480px;
+  background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero_mob_1x-min.jpg);
+  margin: 0;
   background-color: #c4c4c4;
+}
+@media (min-device-pixel-ratio: 2), (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+  .decision {
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero_mob_2x-min.jpg);
+  }
+}
+@media screen and (min-width: 768px) {
+  .decision {
+    width: 768px;
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero_tab_1x-min.jpg);
+  }
+}
+@media screen and (min-width: 768px) and (min-device-pixel-ratio: 2), screen and (min-width: 768px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 768px) and (min-resolution: 192dpi), screen and (min-width: 768px) and (min-resolution: 2dppx) {
+  .decision {
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero_tab_2x-min.jpg);
+  }
+}
+@media screen and (min-width: 1200px) {
+  .decision {
+    padding: 200px 0;
+    width: 1200px;
+    height: 600px;
+    max-width: 1600px;
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero_desk_1x-min.jpg);
+  }
+}
+@media screen and (min-width: 1200px) and (min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (min-resolution: 192dpi), screen and (min-width: 1200px) and (min-resolution: 2dppx) {
+  .decision {
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero_desk_2x-min.jpg);
+  }
 }
 
 .benefits {
@@ -640,6 +682,15 @@ img {
   .team {
     padding-top: 60px;
     padding-bottom: 60px;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .team {
+    padding-top: 60px;
+    padding-bottom: 60px;
+    display: flex;
   }
 }
 .team__title {
@@ -666,6 +717,11 @@ img {
     margin-bottom: 30px;
   }
 }
+@media screen and (min-width: 768px) {
+  .team__title {
+    margin-bottom: 30px;
+  }
+}
 @media screen and (min-width: 1200px) {
   .team__title {
     margin-bottom: 50px;
@@ -679,6 +735,12 @@ img {
     display: block;
   }
 }
+@media screen and (min-width: 768px) {
+  .team__list {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
 .team__photo {
   display: block;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
@@ -687,6 +749,12 @@ img {
 @media screen and (min-width: 480px) {
   .team__photo {
     margin-bottom: 30px;
+    width: 450px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .team__photo {
+    width: 354px;
   }
 }
 @media screen and (min-width: 480px) {
@@ -694,16 +762,23 @@ img {
     margin-bottom: 0;
   }
 }
-.team-position {
-  text-align: center;
-}
-
 .team__wrapper {
+  display: flex;
   background-color: var(--main-bgd-color);
   margin-top: -5px;
   padding: 30px 32px;
+  text-align: center;
 }
-
+@media screen and (min-width: 480px) {
+  .team__wrapper {
+    width: 450px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .team__wrapper {
+    width: 354px;
+  }
+}
 .team__title__participant {
   font-weight: 500;
   font-size: 16px;
