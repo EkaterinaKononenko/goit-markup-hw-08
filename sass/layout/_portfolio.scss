@@ -2,22 +2,29 @@
   border-bottom: 1px solid #ececec;
 }
 .portfolio__page {
-  padding-top: 94px;
-  padding-bottom: 94px;
+  padding-top: 60px;
+  padding-bottom: 60px;
+  @media screen and (min-width: 1200px) {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
 }
 .portfolio__list {
-  justify-content: center;
   margin-bottom: 50px;
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: 8px;
+  @media screen and (min-width: 768px) {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+  }
 }
 .portfolio__item {
   margin-right: 8px;
   &:last-child {
     margin-right: 0;
   }
-}
-
-.portfolio__list {
-  display: flex;
 }
 
 .examples {
@@ -28,8 +35,15 @@
 
 .examples__item {
   margin: 15px;
-  width: calc(100% / 3 - 30px);
+  width: 450px;
   font-family: "Roboto", sans-serif;
+  @media screen and (min-width: 768px) {
+    width: calc(100% / 2 - 30px);
+  }
+
+  @media screen and (min-width: 1200px) {
+    width: calc(100% / 3 - 30px);
+  }
 }
 .examples__link {
   display: block;
@@ -50,6 +64,10 @@
     250ms,
     cubic-bezier(0.4, 0, 0.2, 1)
   );
+  @media screen and (min-width: 768px) {
+    display: flex;
+    flex-direction: column;
+  }
 }
 
 .examples__text {
@@ -61,10 +79,18 @@
   letter-spacing: 0.03em;
   color: #ffffff;
   background: rgba(33, 150, 243, 0.9);
-  padding: 63px 24px;
+  padding: 77px 24px;
   height: 100%;
   transform: translateY(101%);
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  @media screen and (min-width: 768px) {
+  }
+
+  @media screen and (min-width: 1200px) {
+    padding: 63px 24px;
+  }
+
+  letter-spacing: 0.03em;
 }
 .examples__pictures {
   position: relative;
@@ -73,6 +99,14 @@
 .examples__link:hover .examples__text,
 .examples__link:focus .examples__text {
   transform: translateY(0);
+}
+.examples__img {
+  width: 450px;
+  height: 294px;
+  @media screen and (min-width: 1200px) {
+    width: 370px;
+    height: 294px;
+  }
 }
 .examples__title {
   font-family: "Roboto", sans-serif;
@@ -97,6 +131,12 @@
   background-color: var(--main-bgd-color);
   border: 1px solid #eeeeee;
   border-top: 0;
+  @media screen and (min-width: 768px) {
+    flex-grow: 1;
+  }
+
+  @media screen and (min-width: 1200px) {
+  }
 }
 .examles__text__describe {
   font-size: 16px;

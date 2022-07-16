@@ -1,6 +1,19 @@
 .adress__container {
-  display: flex;
+  display: block;
   flex-wrap: wrap;
-  align-items: baseline;
-  justify-content: flex-start;
+  text-align: center;
+  justify-content: center;
+  width: 480px;
+  @media screen and (min-width: 768px) {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    width: 100%;
+  }
+  @media screen and (min-width: 1200px) {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    justify-content: flex-start;
+  }
 }

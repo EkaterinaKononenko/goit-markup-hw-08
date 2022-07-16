@@ -24,40 +24,105 @@
         <a href="" lang="en" class="nav__logo link"
           >Web<span class="nav__text" lang="en">Studio</span></a
         >
-        <nav class="nav__site">
-          <ul class="nav__list link">
-            <li class="nav__item">
-              <a href="./index.html" class="nav__link link">Студия</a>
+        <button type="button" class="menu-open-button button">
+          <svg class="menu-open-button__icon" width="24" height="16">
+            <use href="./images/icons.svg#icon-menu_24px"></use>
+          </svg>
+        </button>
+      </div>
+      <div class="header-menu is-hidden">
+        <button type="button" class="menu-close-btn">
+          <svg class="menu-close-btn__icon" width="18.67" height="18.67">
+            <use href="./images/icons.svg#icon-cross"></use>
+          </svg>
+        </button>
+      </div>
+      <nav class="nav__site">
+        <ul class="nav__list link">
+          <li class="nav__item">
+            <a href="./index.html" class="nav__link link">Студия</a>
+          </li>
+          <li class="nav__item">
+            <a href="./portfolio.html" class="nav__link link current"
+              >Портфолио</a
+            >
+          </li>
+          <li class="nav__item">
+            <a href="" class="nav__link link">Контакты</a>
+          </li>
+        </ul>
+      </nav>
+
+      <ul class="contacts link">
+        <li class="contacts__item">
+          <a href="" class="contacts__link link">
+            <svg class="contacts__pic" width="16" height="12">
+              <use href="./images/icons.svg#icon-envelope"></use>
+            </svg>
+            info@devstudio.com</a
+          >
+        </li>
+        <li class="contacts__item">
+          <a href="" class="contacts__link link">
+            <svg class="contacts__pic" width="10" height="16">
+              <use href="./images/icons.svg#icon-smartphone"></use>
+            </svg>
+            +380961111111</a
+          >
+        </li>
+      </ul>
+      <div class="mob_menu is-hidden">
+        <div class="container mob_container">
+          <button type="button" class="menu-close-button">
+            <svg class="menu-close-btn__icon" width="18.67" height="18.67">
+              <use href="./images/icons.svg#icon-close_24px"></use>
+            </svg>
+          </button>
+          <ul class="mob_menu__list link">
+            <li class="mob_menu_nav__item">
+              <a href="./index.html" class="mob_menu_nav__link link">Студия</a>
             </li>
-            <li class="nav__item">
-              <a href="./portfolio.html" class="nav__link link current"
+            <li class="mob_menu_nav__item">
+              <a
+                href="./portfolio.html"
+                class="mob_menu_nav__link link mob-current"
                 >Портфолио</a
               >
             </li>
-            <li class="nav__item">
-              <a href="" class="nav__link link">Контакты</a>
+            <li class="mob_menu_nav__item">
+              <a href="" class="mob_menu_nav__link link">Контакты</a>
             </li>
           </ul>
-        </nav>
-
-        <ul class="contacts link">
-          <li class="contacts__item">
-            <a href="" class="contacts__link link">
-              <svg class="contacts__pic" width="16" height="12">
-                <use href="./images/icons.svg#icon-envelope"></use>
-              </svg>
-              info@devstudio.com</a
-            >
-          </li>
-          <li class="contacts__item">
-            <a href="" class="contacts__link link">
-              <svg class="contacts__pic" width="10" height="16">
-                <use href="./images/icons.svg#icon-smartphone"></use>
-              </svg>
-              +380961111111</a
-            >
-          </li>
-        </ul>
+          <ul class="mob_menu_contacts link">
+            <li class="mob_menu_contacts__item">
+              <a href="" class="mob_menu_contacts__tel link"> +380961111111</a>
+            </li>
+            <li class="mob_menu_contacts__item">
+              <a href="" class="mob_menu_contacts__mail link">
+                info@devstudio.com</a
+              >
+            </li>
+          </ul>
+          <div class="header-soc-sites">
+            <ul class="header-soc-sites__list link">
+              <li class="header-soc-sites__item">
+                <a href="" class="header-soc-sites__link link">Instagram</a>
+              </li>
+              <li class="header-soc-sites__item">
+                <div class="header-soc-sites__border"></div>
+                <a href="" class="header-soc-sites__link link">Twitter</a>
+              </li>
+              <li class="header-soc-sites__item">
+                <div class="header-soc-sites__border"></div>
+                <a href="" class="header-soc-sites__link link">Facebook</a>
+              </li>
+              <li class="header-soc-sites__item">
+                <div class="header-soc-sites__border"></div>
+                <a href="" class="header-soc-sites__link link">LinkedIn</a>
+              </li>
+            </ul>
+          </div>
+        </div>
       </div>
     </header>
     <main class="portfolio-examples">
@@ -74,10 +139,10 @@
             <li class="portfolio__item">
               <button type="button" class="portfolio__btn">Приложения</button>
             </li>
-            <li class="portfolio__item">
+            <li class="portfolio__item btn">
               <button type="button" class="portfolio__btn">Дизайн</button>
             </li>
-            <li class="portfolio__item">
+            <li class="portfolio__item btn">
               <button type="button" class="portfolio__btn">Маркетинг</button>
             </li>
           </ul>
@@ -85,12 +150,35 @@
             <li class="examples__item">
               <a href="" class="examples__link">
                 <div class="examples__pictures">
-                  <img
-                    src="./images/technokrjak.jpg"
-                    alt="Технокряк"
-                    width="370"
-                    height="294"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/tehno_desk_1x-min.jpg 1x,
+                        ./images/tehno_desk_2x-min.jpg 2x
+                      "
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/tehno_tab_1x-min.jpg 1x,
+                        ./images/tehno_tab_2x-min.jpg 2x
+                      "
+                      media="(min-width: 768px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/tehno_mob_1x-min.jpg 1x,
+                        ./images/tehno_mob_2x-min.jpg 2x
+                      "
+                      media="(min-width: 480px)"
+                    />
+                    <img
+                      class="examples__img"
+                      src="./images/technokrjak.jpg"
+                      alt="Технокряк"
+                    />
+                  </picture>
+
                   <p class="examples__text">
                     Ресурс предлагает комплексные предложения с разным уровнем
                     функционала и сервисов. Все это позволит посетителю получить
@@ -106,12 +194,34 @@
             <li class="examples__item">
               <a href="" class="examples__link">
                 <div class="examples__pictures">
-                  <img
-                    src="./images/new-orlean.jpg"
-                    alt="Постер Новый Орлеан"
-                    width="370"
-                    height="294"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/new_orlean_desk_1x-min.jpg 1x,
+                        ./images/new_orlean_desk_2x-min.jpg 2x
+                      "
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/new_orlean_tab_1x-min.jpg 1x,
+                        ./images/new_orlean_tab_2x-min.jpg 2x
+                      "
+                      media="(min-width: 768px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/new_orlean_mob_1x-min.jpg 1x,
+                        ./images/new_orlean_mob_2x-min.jpg 2x
+                      "
+                      media="(min-width: 480px)"
+                    />
+                    <img
+                      class="examples__img"
+                      src="./images/new-orlean.jpg"
+                      alt="Постер Новый Орлеан"
+                    />
+                  </picture>
                   <p class="examples__text">
                     Ресурс предлагает комплексные предложения с разным уровнем
                     функционала и сервисов. Все это позволит посетителю получить
@@ -129,12 +239,35 @@
             <li class="examples__item">
               <a href="" class="examples__link">
                 <div class="examples__pictures">
-                  <img
-                    src="./images/seafood.jpg"
-                    alt="Ресторан морской еды"
-                    width="370"
-                    height="294"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/seafood_desk_1x-min.jpg 1x,
+                        ./images/seafood_desk_2x-min.jpg 2x
+                      "
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/seafood_tab_1x-min.jpg 1x,
+                        ./images/seafood_tab_2x-min.jpg 2x
+                      "
+                      media="(min-width: 768px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/seafood_mob_1x-min.jpg 1x,
+                        ./images/seafood_mob_2x-min.jpg 2x
+                      "
+                      media="(min-width: 480px)"
+                    />
+                    <img
+                      class="examples__img"
+                      src="./images/seafood.jpg"
+                      alt="Ресторан морской еды"
+                    />
+                  </picture>
+
                   <p class="examples__text">
                     Ресурс предлагает комплексные предложения с разным уровнем
                     функционала и сервисов. Все это позволит посетителю получить
@@ -152,12 +285,35 @@
             <li class="examples__item">
               <a href="" class="examples__link">
                 <div class="examples__pictures">
-                  <img
-                    src="./images/prime.jpg"
-                    alt="Основной проэкт"
-                    width="370"
-                    height="294"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/prime_desk_1x-min.jpg 1x,
+                        ./images/prime_desk_2x-min.jpg 2x
+                      "
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/prime_tab_1x-min.jpg 1x,
+                        ./images/prime_tab_2x-min.jpg 2x
+                      "
+                      media="(min-width: 768px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/prime_mob_1x-min.jpg 1x,
+                        ./images/prime_mob_2x-min.jpg 2x
+                      "
+                      media="(min-width: 480px)"
+                    />
+                    <img
+                      class="examples__img"
+                      src="./images/prime.jpg"
+                      alt="Основной проэкт"
+                    />
+                  </picture>
+
                   <p class="examples__text">
                     Ресурс предлагает комплексные предложения с разным уровнем
                     функционала и сервисов. Все это позволит посетителю получить
@@ -175,12 +331,35 @@
             <li class="examples__item">
               <a href="" class="examples__link">
                 <div class="examples__pictures">
-                  <img
-                    src="./images/boxes.jpg"
-                    alt="Проэкт коробки"
-                    width="370"
-                    height="294"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/boxes_desk_1x-min.jpg 1x,
+                        ./images/boxes_desk_2x-min.jpg 2x
+                      "
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/boxes_tab_1x-min.jpg 1x,
+                        ./images/boxes_tab_2x-min.jpg 2x
+                      "
+                      media="(min-width: 768px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/boxes_mob_1x-min.jpg 1x,
+                        ./images/boxes_mob_2x-min.jpg 2x
+                      "
+                      media="(min-width: 480px)"
+                    />
+                    <img
+                      class="examples__img"
+                      src="./images/boxes.jpg"
+                      alt="Проэкт коробки"
+                    />
+                  </picture>
+
                   <p class="examples__text">
                     Ресурс предлагает комплексные предложения с разным уровнем
                     функционала и сервисов. Все это позволит посетителю получить
@@ -198,12 +377,35 @@
             <li class="examples__item">
               <a href="" class="examples__link">
                 <div class="examples__pictures">
-                  <img
-                    src="./images/inspiration.jpg"
-                    alt="Вдохновение не имеет границ"
-                    width="370"
-                    height="294"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/monitor_desk_1x-min.jpg 1x,
+                        ./images/monitor_desk_2x-min.jpg 2x
+                      "
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/monitor_tab_1x-min.jpg 1x,
+                        ./images/monitor_tab_2x-min.jpg 2x
+                      "
+                      media="(min-width: 768px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/monitor_mob_1x-min.jpg 1x,
+                        ./images/monitor_mob_2x-min.jpg 2x
+                      "
+                      media="(min-width: 480px)"
+                    />
+                    <img
+                      class="examples__img"
+                      src="./images/inspiration.jpg"
+                      alt="Вдохновение не имеет границ"
+                    />
+                  </picture>
+
                   <p class="examples__text">
                     Ресурс предлагает комплексные предложения с разным уровнем
                     функционала и сервисов. Все это позволит посетителю получить
@@ -221,12 +423,35 @@
             <li class="examples__item">
               <a href="" class="examples__link">
                 <div class="examples__pictures">
-                  <img
-                    src="./images/jurnal.jpg"
-                    alt="Лимитированное издание"
-                    width="370"
-                    height="294"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/book_desk_1x-min.jpg 1x,
+                        ./images/book_desk_2x-min.jpg 2x
+                      "
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/book_tab_1x-min.jpg 1x,
+                        ./images/book_tab_2x-min.jpg 2x
+                      "
+                      media="(min-width: 768px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/book_mob_1x-min.jpg 1x,
+                        ./images/book_mob_2x-min.jpg 2x
+                      "
+                      media="(min-width: 480px)"
+                    />
+                    <img
+                      class="examples__img"
+                      src="./images/jurnal.jpg"
+                      alt="Лимитированное издание"
+                    />
+                  </picture>
+
                   <p class="examples__text">
                     Ресурс предлагает комплексные предложения с разным уровнем
                     функционала и сервисов. Все это позволит посетителю получить
@@ -244,12 +469,38 @@
             <li class="examples__item">
               <a href="" class="examples__link">
                 <div class="examples__pictures">
-                  <img
-                    src="./images/lab.jpg"
-                    alt="Проект лаборатория"
-                    width="370"
-                    height="294"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/lab_desk_1x-min.jpg 1x,
+                        ./images/lab_desk_2x-min.jpg 2x
+                      "
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/lab_tab_1x-min.jpg 1x,
+                        ./images/lab_tab_2x-min.jpg 2x
+                      "
+                      media="(min-width: 768px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/lab_mob_1x-min.jpg 1x,
+                        ./images/lab_mob_2x-min.jpg 2x
+                      "
+                      media="(min-width: 480px)"
+                    />
+                    <img
+                      class="examples__img"
+                      srcset="
+                        ./images/lab_mob_1x-min.jpg 1x,
+                        ./images/lab_mob_2x-min.jpg 2x
+                      "
+                      src="./images/lab.jpg"
+                      alt="Проект лаборатория"
+                    />
+                  </picture>
                   <p class="examples__text">
                     Ресурс предлагает комплексные предложения с разным уровнем
                     функционала и сервисов. Все это позволит посетителю получить
@@ -267,12 +518,34 @@
             <li class="examples__item">
               <a href="" class="examples__link">
                 <div class="examples__pictures">
-                  <img
-                    src="./images/bussines.jpg"
-                    alt="Улучшение бизнеса"
-                    width="370"
-                    height="294"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/laptop_desk_1x-min.jpg 1x,
+                        ./images/laptop_desk_2x-min.jpg 2x
+                      "
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/laptop_tab_1x-min.jpg 1x,
+                        ./images/laptop_tab_2x-min.jpg 2x
+                      "
+                      media="(min-width: 768px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/laptop_mob_1x-min.jpg 1x,
+                        ./images/laptop_mob_2x-min.jpg 2x
+                      "
+                      media="(min-width: 480px)"
+                    />
+                    <img
+                      class="examples__img"
+                      src="./images/bussines.jpg"
+                      alt="Улучшение бизнеса"
+                    />
+                  </picture>
                   <p class="examples__text">
                     Ресурс предлагает комплексные предложения с разным уровнем
                     функционала и сервисов. Все это позволит посетителю получить
@@ -366,5 +639,6 @@
         </div>
       </div>
     </footer>
+    -->
   </body>
 </html>
