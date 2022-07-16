@@ -14,13 +14,18 @@
     width: 768px;
   }
   @media screen and (min-width: 1200px) {
-    width: 1200px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: start;
   }
 }
 .all-footer {
-  display: block;
-  width: 480px;
-  margin-bottom: 60px;
+  @media screen and (min-width: 480px) {
+    display: block;
+    width: 480px;
+    margin-bottom: 60px;
+  }
 }
 
 .join__footer {
@@ -30,12 +35,13 @@
     margin-left: auto;
   }
   @media screen and (min-width: 1200px) {
-    margin-left: 70px;
+    margin-left: 0;
+    width: 206px;
   }
 }
 .adress__wrapper {
   @media screen and (min-width: 768px) {
-    width: calc(100% / 2);
+    width: calc(100% / 3);
   }
 }
 .adress__item {
@@ -67,6 +73,9 @@
     text-decoration-color: var(--main-color);
     color: var(--main-color);
   }
+  @media screen and (min-width: 1200px) {
+    width: 100%;
+  }
 }
 
 .adress__link__mail {
@@ -92,6 +101,9 @@
     text-decoration-line: underline;
     text-decoration-color: var(--main-color);
     color: var(--main-color);
+    @media screen and (min-width: 1200px) {
+      margin-bottom: 9px;
+    }
   }
 }
 
@@ -120,6 +132,10 @@
 }
 .adress__list {
   display: block;
+  @media screen and (min-width: 1200px) {
+    width: calc(100% / 3);
+    margin-right: 0;
+  }
 }
 
 .join__list {
@@ -127,6 +143,9 @@
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
+  @media screen and (min-width: 1200px) {
+    display: flex;
+  }
 }
 .join__text {
   margin-bottom: 20px;
@@ -140,6 +159,8 @@
   color: #ffffff;
   display: block;
   margin-bottom: 20px;
+  @media screen and (min-width: 1200px) {
+  }
 }
 
 .join__item {
@@ -155,6 +176,9 @@
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
+  @media screen and (min-width: 1200px) {
+    display: block;
+  }
 }
 
 .join__link {
@@ -175,6 +199,8 @@
   }
   @media screen and (min-width: 1200px) {
     display: flex;
+    width: 100%;
+    height: 100%;
   }
 }
 
@@ -189,7 +215,8 @@
     width: 100%;
   }
   @media screen and (min-width: 1200px) {
-    margin-left: auto;
+    width: calc(100% / 3);
+    margin-left: 93px;
   }
 }
 .subscription__text {
