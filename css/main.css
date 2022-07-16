@@ -225,7 +225,6 @@ body {
   padding-bottom: 25px;
   align-items: center;
   display: block;
-  width: 480px;
   transition-property: text-decoration-color, outline, border-width;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
@@ -234,6 +233,11 @@ body {
   text-decoration-color: var(--main-color);
   outline: 1px solid #ececec;
   border-width: 100%;
+}
+@media screen and (max-width: 767px) {
+  .nav__logo {
+    width: 480px;
+  }
 }
 @media screen and (min-width: 768px) {
   .nav__logo {
@@ -277,37 +281,6 @@ body {
   fill: currentColor;
 }
 
-/***.adress__logo {
-  font-family: "Raleway", sans-serif;
-  font-weight: 700;
-  font-size: 26px;
-  line-height: 1.19;
-  color: var(--main-color);
-  letter-spacing: 0.03em;
-  display: block;
-  margin-bottom: 20px;
-  width: 100%;
-  @include transition(
-    text-decoration-color,
-    outline,
-    null,
-    250ms,
-    cubic-bezier(0.4, 0, 0.2, 1)
-  );
-  &:hover,
-  &:focus {
-    text-decoration-color: var(--main-color);
-    outline: 1px solid #ececec;
-  }
-  @media screen and (min-width: 1200px) {
-    display: flex;
-    justify-content: start;
-    align-items: center;
-  }
-}
-.adress__logo__decor {
-  color: var(--main-bgd-color);
-}*/
 .adress__logo {
   font-family: "Raleway", sans-serif;
   font-weight: 700;
@@ -321,11 +294,21 @@ body {
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
-
-.adress__logo:hover,
-.adress__logo:focus {
+.adress__logo:hover, .adress__logo:focus {
   text-decoration-color: var(--main-color);
   outline: 1px solid #ececec;
+}
+@media screen and (max-width: 768px) {
+  .adress__logo {
+    width: 100%;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .adress__logo {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+  }
 }
 
 .adress__logo__decor {
@@ -362,7 +345,6 @@ body {
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.02em;
-  width: 1200px;
 }
 @media screen and (min-width: 480px) {
   .page__header {
@@ -503,6 +485,8 @@ body {
 @media screen and (min-width: 768px) {
   .contacts__link {
     display: flex;
+    padding-top: 0;
+    padding-bottom: 0;
   }
 }
 @media screen and (min-width: 1200px) {
@@ -1663,6 +1647,7 @@ img {
 }
 @media screen and (min-width: 768px) {
   .examples__link {
+    height: auto;
     display: flex;
     flex-direction: column;
   }

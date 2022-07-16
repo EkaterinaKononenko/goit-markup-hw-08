@@ -1,4 +1,4 @@
-/***.adress__logo {
+.adress__logo {
   font-family: "Raleway", sans-serif;
   font-weight: 700;
   font-size: 26px;
@@ -7,7 +7,6 @@
   letter-spacing: 0.03em;
   display: block;
   margin-bottom: 20px;
-  width: 100%;
   @include transition(
     text-decoration-color,
     outline,
@@ -20,34 +19,15 @@
     text-decoration-color: var(--main-color);
     outline: 1px solid #ececec;
   }
+  @media screen and (max-width: 768px) {
+    width: 100%;
+  }
   @media screen and (min-width: 1200px) {
     display: flex;
     justify-content: start;
     align-items: center;
   }
 }
-.adress__logo__decor {
-  color: var(--main-bgd-color);
-}*/
-.adress__logo {
-  font-family: "Raleway", sans-serif;
-  font-weight: 700;
-  font-size: 26px;
-  line-height: 1.19;
-  color: var(--main-color);
-  letter-spacing: 0.03em;
-  display: block;
-  margin-bottom: 20px;
-  transition-property: text-decoration-color, outline;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-}
-.adress__logo:hover,
-.adress__logo:focus {
-  text-decoration-color: var(--main-color);
-  outline: 1px solid #ececec;
-}
-
 .adress__logo__decor {
   color: var(--main-bgd-color);
 }

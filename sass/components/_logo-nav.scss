@@ -10,7 +10,6 @@
   padding-bottom: 25px;
   align-items: center;
   display: block;
-  width: 480px;
   @include transition(
     text-decoration-color,
     outline,
@@ -23,6 +22,9 @@
     text-decoration-color: var(--main-color);
     outline: 1px solid #ececec;
     border-width: 100%;
+  }
+  @media screen and (max-width: 767px) {
+    width: 480px;
   }
   @media screen and (min-width: 768px) {
     margin-right: 93px;
