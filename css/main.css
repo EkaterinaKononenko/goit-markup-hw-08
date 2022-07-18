@@ -323,8 +323,15 @@ body {
 }
 
 .adress__container {
-  display: block;
+  text-align: center;
+  justify-content: center;
+  width: 100%;
   flex-wrap: wrap;
+}
+@media screen and (max-width: 768px) {
+  .adress__container {
+    display: block;
+  }
 }
 @media screen and (min-width: 768px) {
   .adress__container {
@@ -337,16 +344,9 @@ body {
 @media screen and (min-width: 1200px) {
   .adress__container {
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     align-items: baseline;
     justify-content: flex-start;
-  }
-}
-@media screen and (max-width: 1200px) {
-  .adress__container {
-    text-align: center;
-    justify-content: center;
-    width: 100%;
   }
 }
 
@@ -439,17 +439,22 @@ body {
   margin-left: 50px;
 }
 
-@media screen and (max-width: 768px) {
-  .contacts {
-    display: none;
-    margin-left: auto;
-  }
+.contacts {
+  display: none;
+  margin-left: auto;
 }
 @media screen and (min-width: 768px) {
   .contacts {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .contacts {
+    display: flex;
+    margin-left: auto;
+    flex-wrap: nowrap;
   }
 }
 
@@ -483,9 +488,9 @@ body {
 @media screen and (min-width: 1200px) {
   .contacts__link {
     display: flex;
+    flex-wrap: nowrap;
     align-items: center;
     justify-content: center;
-    text-align: center;
   }
 }
 
@@ -1270,7 +1275,7 @@ img {
   .adress {
     width: 100%;
     display: flex;
-    align-items: center;
+    align-items: baseline;
     justify-content: start;
   }
 }
@@ -1280,6 +1285,11 @@ img {
     display: block;
     width: 480px;
     margin-bottom: 60px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .all-footer {
+    margin-left: 215px;
   }
 }
 
@@ -1295,7 +1305,7 @@ img {
 @media screen and (min-width: 1200px) {
   .join__footer {
     margin-left: 0;
-    width: 100%;
+    width: 33.3333333333%;
   }
 }
 
@@ -1386,6 +1396,7 @@ img {
   .adress__list {
     width: 33.3333333333%;
     margin-right: 0;
+    display: flex;
   }
 }
 
@@ -1517,6 +1528,11 @@ img {
 .subscription__email:hover, .subscription__email:focus {
   border-color: #2196f3;
 }
+@media screen and (min-width: 1200px) {
+  .subscription__email:hover, .subscription__email:focus {
+    display: flex;
+  }
+}
 .subscription__email::placeholder {
   font-family: "Roboto";
   font-size: 16px;
@@ -1567,6 +1583,13 @@ img {
 .adress ~ .container {
   padding-left: 0;
   padding-right: 0;
+}
+
+@media screen and (max-width: 1200px) {
+  .subscription-field {
+    display: flex;
+    justify-content: space-between;
+  }
 }
 
 .page__header {

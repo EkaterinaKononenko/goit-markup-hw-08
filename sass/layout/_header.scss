@@ -77,16 +77,16 @@
 .contacts {
   display: none;
   margin-left: auto;
-}
-@media screen and (min-width: 768px) {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-}
-@media screen and (min-width: 1200px) {
-  display: flex;
-  margin-left: auto;
-  flex-wrap: nowrap;
+  @media screen and (min-width: 768px) {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+  @media screen and (min-width: 1200px) {
+    display: flex;
+    margin-left: auto;
+    flex-wrap: nowrap;
+  }
 }
 
 .contacts__link {
