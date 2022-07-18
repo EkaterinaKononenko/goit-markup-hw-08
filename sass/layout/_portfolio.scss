@@ -13,20 +13,13 @@
   margin-bottom: 50px;
   display: flex;
   flex-wrap: wrap;
-  margin-right: 8px;
+  gap: 8px;
   @media screen and (min-width: 768px) {
     display: flex;
     flex-wrap: nowrap;
     justify-content: center;
   }
 }
-.portfolio__item {
-  margin-right: 8px;
-  &:last-child {
-    margin-right: 0;
-  }
-}
-
 .examples {
   display: flex;
   flex-wrap: wrap;
@@ -34,8 +27,9 @@
 }
 
 .examples__item {
+  display: flex;
   margin: 15px;
-  width: 450px;
+  width: 100%;
   font-family: "Roboto", sans-serif;
   @media screen and (min-width: 768px) {
     width: calc(100% / 2 - 30px);
@@ -46,7 +40,9 @@
   }
 }
 .examples__link {
-  display: block;
+  display: flex;
+  flex-direction: column;
+  height: auto;
   text-decoration: none;
 
   &:hover,
@@ -65,9 +61,6 @@
     cubic-bezier(0.4, 0, 0.2, 1)
   );
   @media screen and (min-width: 768px) {
-    height: auto;
-    display: flex;
-    flex-direction: column;
   }
 }
 
@@ -82,6 +75,7 @@
   background: rgba(33, 150, 243, 0.9);
   padding: 77px 24px;
   height: 100%;
+  overflow-y: scroll;
   transform: translateY(101%);
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
   @media screen and (min-width: 768px) {
@@ -128,16 +122,11 @@
 }
 
 .examples__wrapper {
+  flex-grow: 1;
   padding: 20px 24px;
   background-color: var(--main-bgd-color);
   border: 1px solid #eeeeee;
   border-top: 0;
-  @media screen and (min-width: 768px) {
-    flex-grow: 1;
-  }
-
-  @media screen and (min-width: 1200px) {
-  }
 }
 .examles__text__describe {
   font-size: 16px;

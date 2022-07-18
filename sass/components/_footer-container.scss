@@ -1,9 +1,11 @@
 .adress__container {
-  display: block;
-  flex-wrap: wrap;
   text-align: center;
   justify-content: center;
-  width: 480px;
+  width: 100%;
+  flex-wrap: wrap;
+  @media screen and (max-width: 768px) {
+    display: block;
+  }
   @media screen and (min-width: 768px) {
     display: flex;
     flex-wrap: wrap;
