@@ -244,6 +244,9 @@
   color: #ffffff;
   display: block;
   margin-bottom: 20px;
+  @media screen and (min-width: 1200px) {
+    text-align: start;
+  }
 }
 
 .subscription__email {

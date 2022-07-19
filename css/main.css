@@ -1512,6 +1512,11 @@ img {
   display: block;
   margin-bottom: 20px;
 }
+@media screen and (min-width: 1200px) {
+  .subscription__text {
+    text-align: start;
+  }
+}
 
 .subscription__email {
   width: 358px;
