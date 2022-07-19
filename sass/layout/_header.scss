@@ -125,6 +125,31 @@
     flex-wrap: nowrap;
     align-items: center;
     justify-content: center;
+    margin-left: 0;
+    padding-top: 32px;
+    padding-bottom: 32px;
+  }
+}
+.contacts__item:last-child {
+  @media screen and (max-width: 1199px) {
+    padding-bottom: 21px;
+  }
+  @media screen and (min-width: 1200px) {
+    margin-left: 50px;
+  }
+}
+.contacts__item:first-child {
+  @media screen and (max-width: 1199px) {
+    margin-bottom: 10px;
+    padding-top: 21px;
+    @media screen and (min-width: 1199px) {
+      margin-left: 0;
+    }
+  }
+}
+.contacts__item {
+  @media screen and (max-width: 1200px) {
+    margin-left: 50px;
   }
 }
 .contacts__pic {
