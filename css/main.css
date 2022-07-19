@@ -344,8 +344,7 @@ body {
     display: flex;
     flex-wrap: nowrap;
     align-items: baseline;
-    justify-content: flex-start;
-    text-align: start;
+    justify-content: center;
   }
 }
 
@@ -1982,8 +1981,8 @@ img {
   align-items: center;
   position: absolute;
   cursor: pointer;
-  right: 8px;
-  top: 8px;
+  right: 21px;
+  top: 21px;
   background-color: transparent;
   transition-property: fill, border-color;
   transition-duration: 250ms;
