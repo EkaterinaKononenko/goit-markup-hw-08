@@ -196,7 +196,7 @@ body {
   cursor: pointer;
   background: #2196f3;
   border: none;
-  margin-left: 140px;
+  margin: 0 auto;
   align-items: center;
   justify-content: center;
   transition-property: background;
@@ -323,7 +323,7 @@ body {
 .adress__container {
   text-align: center;
   justify-content: center;
-  width: 1200px;
+  max-width: 480px;
   flex-wrap: wrap;
 }
 @media screen and (max-width: 768px) {
@@ -337,6 +337,7 @@ body {
     flex-wrap: wrap;
     align-items: baseline;
     width: 100%;
+    max-width: 768px;
   }
 }
 @media screen and (min-width: 1200px) {
@@ -345,6 +346,7 @@ body {
     flex-wrap: nowrap;
     align-items: baseline;
     justify-content: center;
+    max-width: 1200px;
   }
 }
 
@@ -738,7 +740,7 @@ body {
   background-repeat: no-repeat;
   background-position: 50% 50%;
   background-size: cover;
-  width: 480px;
+  max-width: 480px;
   background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero_mob_1x-min.jpg);
   margin: 0 auto;
   background-color: #c4c4c4;
@@ -751,6 +753,7 @@ body {
 @media screen and (min-width: 768px) {
   .decision {
     width: 768px;
+    max-width: 768px;
     margin: 0 auto;
     background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero_tab_1x-min.jpg);
   }
@@ -1055,7 +1058,7 @@ img {
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
   margin-bottom: 30px;
-  width: 450px;
+  width: 100%;
 }
 @media screen and (min-width: 768px) {
   .team__photo {
@@ -1074,24 +1077,28 @@ img {
   margin-bottom: 0;
 }
 .team__wrapper {
+  display: flex;
   flex-wrap: wrap;
   background-color: var(--main-bgd-color);
   margin-top: -5px;
   padding: 30px 122px;
   text-align: center;
   justify-content: center;
-  width: 450px;
-  height: 162px;
+  width: 100%;
+  height: 100%;
 }
 @media screen and (min-width: 768px) {
   .team__wrapper {
     width: 354px;
+    height: 162px;
     padding: 30px 32px;
+    display: block;
   }
 }
 @media screen and (min-width: 1200px) {
   .team__wrapper {
     width: 270px;
+    height: 162px;
     padding: 30px 32px;
   }
 }
@@ -1575,6 +1582,14 @@ img {
   transition-property: border-color;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  margin-left: auto;
+  margin-right: auto;
+}
+@media screen and (min-width: 768px) {
+  .subscription__email {
+    margin-left: 0;
+    margin-right: 0;
+  }
 }
 
 .subscription__email:hover,
@@ -1623,12 +1638,12 @@ img {
 
 .subscription__form {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
 }
-@media screen and (max-width: 1199px) {
+@media screen and (min-width: 768px) {
   .subscription__form {
     display: block;
-    flex-wrap: wrap;
     text-align: center;
     align-items: center;
     justify-content: center;
@@ -1816,9 +1831,9 @@ img {
 }
 
 .modal {
-  width: 450px;
+  width: 320px;
   max-height: 609px;
-  height: 96%;
+  height: 85%;
   background: #ffffff;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
@@ -1828,6 +1843,11 @@ img {
   position: absolute;
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
   padding: 40px;
+}
+@media screen and (min-width: 480px) {
+  .modal {
+    width: 450px;
+  }
 }
 @media screen and (min-width: 1200px) {
   .modal {
@@ -1901,8 +1921,8 @@ img {
 }
 
 .modal-text {
-  width: 370px;
-  height: 120px;
+  width: 100%;
+  height: 100%;
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
   resize: none;
@@ -1923,6 +1943,12 @@ img {
   line-height: 1.14;
   letter-spacing: 0.01em;
   color: rgba(117, 117, 117, 0.5);
+}
+@media screen and (min-width: 480px) {
+  .modal-text {
+    width: 370px;
+    height: 120px;
+  }
 }
 @media screen and (min-width: 1200px) {
   .modal-text {
@@ -2055,7 +2081,7 @@ img {
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
   border-color: transparent;
-  margin-left: 124px;
+  margin: 0 auto;
   transition-property: background, box-shadow;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
