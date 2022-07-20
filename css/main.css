@@ -614,6 +614,12 @@ body {
     display: none;
   }
 }
+.mob_menu .container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: space-between;
+}
 
 .mob_menu_nav__item:not(:last-child) {
   margin-bottom: 32px;
@@ -630,7 +636,6 @@ body {
 .mob_menu__list {
   display: flex;
   flex-direction: column;
-  margin-bottom: 302px;
 }
 
 .mob_menu_nav__link {
@@ -658,8 +663,7 @@ body {
 }
 
 .header-soc-sites {
-  display: flex;
-  flex-wrap: wrap;
+  display: block;
 }
 
 .header-soc-sites__list {
