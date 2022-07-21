@@ -117,8 +117,7 @@
   @media screen and (min-width: 768px) {
     display: flex;
     padding-top: 0;
-    padding-bottom: 0;
-    margin-left: 50px;
+    padding-bottom: 21px;
   }
   @media screen and (min-width: 1200px) {
     display: flex;
@@ -131,10 +130,7 @@
   }
 }
 .contacts__item:last-child {
-  @media screen and (max-width: 1199px) {
-    padding-bottom: 21px;
-  }
-  @media screen and (min-width: 1200px) {
+  @media screen and (min-width: 768px) {
     margin-left: 50px;
   }
 }
@@ -295,6 +291,7 @@
 .header-soc-sites__list {
   display: flex;
   margin-top: 64px;
+  flex-wrap: wrap;
   @media screen and (min-width: 768px) {
     display: none;
   }

@@ -96,11 +96,9 @@
 }
 
 .team__wrapper {
-  display: flex;
   flex-wrap: wrap;
   background-color: var(--main-bgd-color);
-  margin-top: -5px;
-  padding: 30px 122px;
+  padding: 30px 32px;
   text-align: center;
   justify-content: center;
 
@@ -117,6 +115,7 @@
     width: 270px;
     height: 162px;
     padding: 30px 32px;
+    margin-top: -5px;
   }
 }
 
